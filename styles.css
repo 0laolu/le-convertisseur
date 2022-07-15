@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+/* list options will have an hover effect for the desktop view - a background colour*/
+
+@media screen and (max-width: 767px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .input-section {
+        padding: 4rem 0;
+        text-align: center;
+    }
+
+    .physical-quantity-container, .physical-unit-container {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width: 90%;
+        margin: 6rem auto 0 auto;
+        padding-bottom: 6rem;
+    }
+
+    .physical-unit-container {
+        margin: 2rem auto 4rem auto;
+    }
+
+    .select-quantity, .select-unit {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .select-quantity .arrow-icon, .select-unit .arrow-icon {
+        font-size: 1.2rem;
+        transition: all 0.4s;
+    }
+
+    .select-quantity .arrow-icon.active, .select-unit .arrow-icon.active {
+        transform: rotateX(180deg);
+    }
+
+    .quantity-dropdown-container, .unit-dropdown-container {
+        background-color: rgba(0, 0, 0, 0.03);
+        width: 100%;
+        margin: 0 auto;
+        max-height: 0;
+        opacity: 0;
+        transition: 0.4s;
+        overflow: hidden;
+    }
+
+    .quantity-dropdown-container.active, .unit-dropdown-container.active {
+        max-height: 13rem;
+        opacity: 1;
+        padding: 1rem 0;/*it had no padding before. If it did, it would be 1rem and 0*/
+        overflow-y: scroll;
+    }
+
+    .quantity-dropdown-container::-webkit-scrollbar, .unit-dropdown-container::-webkit-scrollbar {
+        width: 8px;
+        background-color: lightgrey;
+        /* will have a border radius */
+    }
+
+    .quantity-dropdown-container::-webkit-scrollbar-thumb, .unit-dropdown-container::-webkit-scrollbar-thumb {
+        background-color: grey;
+        /* will have a border radius */
+    }
+
+    .quantity-dropdown-list, .unit-dropdown-list {
+        padding: 1rem; 
+        cursor: pointer;
+    }
+
+    /* list options will have an hover effect for the desktop view - a background colour*/
+
+    .quantity-dropdown-list label, .unit-dropdown-list label{
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .quantity-dropdown-list .radio, .unit-dropdown-list .radio {
+        display: none;
+    }
+
+    .input-header h3 {
+        padding-bottom: 3rem;
+        font-size: 1.1rem;
+    }
+
+    input.number-input {
+        background-color: rgba(0, 0, 0, 0.03);
+        text-align: center;
+        font-size: 4rem;
+        width: 70%;
+        border: none;
+        outline: none;
+    }
+
+    ::placeholder {
+        color: rgba(0, 0, 0, 0.2);
+    }
+
+    .converter-section {
+        border-top: 2px solid grey;
+        border-radius: 25px 25px 0 0;
+        padding: 3rem 1rem;
+    }
+    
+    .quantity-header {
+        text-align: center;
+        padding-bottom: 2.5rem;
+    }
+}

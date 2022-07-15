@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- link to imported fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+        <!-- link to stylesheet -->
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/be84db8335.js" crossorigin="anonymous"></script>
+        <title>My Unit Convertisseur</title>
+    </head>
+    <body>
+        <!-- Where a quantity and a unit are selected -->
+        <section class="input-section">
+        <!-- a dropdown template for the quantities -->
+            <div class="physical-quantity-container"> 
+                <div class="select-quantity clicked-btn">
+                    <span>Select a Quantity</span>  <!-- acts as a placeholder for quantity -->
+        <!-- the arrow down icon -->
+                    <i class="fa-solid fa-angle-down arrow-icon"></i>
+                </div> 
+
+                <div class="quantity-dropdown-container dropdown-parent"> 
+                    <div class="quantity-dropdown-list"> 
+                        <input type="radio" class="radio">
+                        <label data-id="0">Area</label>
+                    </div>
+                    <div class="quantity-dropdown-list"> 
+                        <input type="radio" class="radio">
+                        <label data-id="1">Energy</label>
+                    </div>
+                    <div class="quantity-dropdown-list"> 
+                        <input type="radio" class="radio">
+                        <label data-id="2">Length</label>
+                    </div>
+                    <div class="quantity-dropdown-list"> 
+                        <input type="radio" class="radio">
+                        <label data-id="3">Mass</label>
+                    </div>
+                    <div class="quantity-dropdown-list"> 
+                        <input type="radio" class="radio">
+                        <label data-id="4">Pressure</label>
+                    </div>
+                    <div class="quantity-dropdown-list"> 
+                        <input type="radio" class="radio">
+                        <label data-id="5">Temperature</label>
+                    </div>
+                    <div class="quantity-dropdown-list"> 
+                        <input type="radio" class="radio">
+                        <label data-id="6">Time</label>
+                    </div>
+                    <div class="quantity-dropdown-list"> 
+                        <input type="radio" class="radio">
+                        <label data-id="7">Volume</label>
+                    </div>
+                </div> 
+
+            </div> 
+
+        <!-- a dropdown template for the units -->
+
+            <div class="physical-unit-container"> 
+                <div class="select-unit clicked-btn">
+                    <span>Select a Unit</span>  <!-- acts as a Placeholder for units -->
+                    <!-- the arrow down icon -->
+                    <i class="fa-solid fa-angle-down arrow-icon"></i>
+                </div> 
+
+                <div class="unit-dropdown-container dropdown-parent"> 
+
+                </div> 
+
+            </div> 
+
+            <div class="input-header">
+                <h3>Le Convertisseur</h3>
+                <input class="number-input" type="number" minlength="0" maxlength="6" placeholder="0">
+            </div>
+        </section>
+        
+        <!-- conversion results -->
+        <section class="converter-section">
+            <h2 class="quantity-header">Length</h2>
+            <div class="conversion-container">
+                <h3 class="conversion-container__header">meter/ cm</h3>
+                <p>
+                    <span id="m-to-cm">0.000 meter = 0.000 centimeter</span> <strong>|</strong>
+                    <span id="cm-to-m">0.000 centimeter = 0.000 meter</span>
+                </p>
+            </div>
+            <div class="unit-container">
+                <h3 class="conversion-container__header">meter/ cm</h3>
+                <p>
+                    <span>0.000 meter = 0.000 centimeter</span> <strong>|</strong>
+                    <span>0.000 centimeter = 0.000 meter</span>
+                </p>
+            </div>
+            <div class="unit-container">
+                <h3 class="conversion-container__header">meter/ cm</h3>
+                <p>
+                    <span>0.000 meter = 0.000 centimeter</span> <strong>|</strong>
+                    <span>0.000 centimeter = 0.000 meter</span>
+                </p>
+            </div>
+            <div class="unit-container">
+                <h3 class="conversion-container__header">meter/ cm</h3>
+                <p>
+                    <span>0.000 meter = 0.000 centimeter</span> <strong>|</strong>
+                    <span>0.000 centimeter = 0.000 meter</span>
+                </p>
+            </div>
+            <div class="unit-container">
+                <h3 class="conversion-container__header">meter/ cm</h3>
+                <p>
+                    <span>0.000 meter = 0.000 centimeter</span> <strong>|</strong>
+                    <span>0.000 centimeter = 0.000 meter</span>
+                </p>
+            </div>
+        </section>
+
+        <script defer src="script.js"></script>
+    </body>
+    </html>
