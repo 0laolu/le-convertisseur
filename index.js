@@ -21,3 +21,27 @@ function displayUnit() {
     unitArrowIcon.classList.toggle('active');
     unitDropdownContainer.classList.toggle('active');
 };
+
+
+
+// getting the values for the data attribute set in the html
+const dataEntries = document.querySelectorAll('[data-id]'); // returns a nodeList of the label elements which tha data attribute was applied to
+
+// looping through each nodeList and using dataNumber to represent each label element
+dataEntries.forEach(dataNumber=> {
+
+    // getting the values for the data-id attribute and storing them in a variable
+    let selectedIndex = dataNumber.dataset.id;
+
+    // using the values of selectedIndex to search the lookup function based on a condition
+    dataNumber.addEventListener('click', function(event) {
+        // closing the dropdown whenever a quantity (dataNumber) is clicked
+        quantityArrowIcon.classList.remove('active');
+        quantityDropdownContainer.classList.remove('active');
+
+        // setting the quantity-select text to any quantity selected from the dropdown
+        let quantitySelectText = document.querySelector('.select-quantity span');
+        quantitySelectText.textContent = event.target.textContent;
+
+    });
+});
