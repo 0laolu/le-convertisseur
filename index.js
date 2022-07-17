@@ -54,6 +54,10 @@ dataEntries.forEach(dataNumber=> {
         let quantitySelectText = document.querySelector('.select-quantity span');
         quantitySelectText.textContent = event.target.textContent;
 
+        // setting the select-unit text to any unit quantity from the dropdown
+        let unitSelectText = document.querySelector('.select-unit span');
+        unitSelectText.textContent = `Select a Unit for ${event.target.textContent}`;
+
         // creating a function that searches the quantityLookup array and performs an action based on a condition
         function lookupFunc() {
             let arrayFromLookup;
@@ -94,6 +98,5 @@ dataEntries.forEach(dataNumber=> {
             return unitDropdownContainer.innerHTML = arrayOfDropdownList.join('');
         };    // end of the dropdownSetup function
         dropdownSetup(valuesInArray);
-        
     });
 });
